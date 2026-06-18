@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact — Crossroot universal file search." />
+  <title>Contact | Crossroot</title>
+  <link rel="icon" href="assets/icons/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="contact">
+  <div data-header></div>
+  
+<main>
+  <section class="page-hero">
+    <div class="container reveal">
+      <div class="eyebrow">Contact us</div>
+      <h1>Let’s talk about<span class="gradient">Crossroot.</span></h1>
+      <p>Send feedback, beta questions, partnership ideas, or a description of the file-search problem you want Crossroot to solve.</p>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="container contact-grid">
+      <aside class="contact-info glass reveal">
+        <h2>Get in touch</h2>
+        <p>The contact form is ready visually. We will connect it to a secure form backend before publishing.</p>
+        <div class="contact-method"><strong>General</strong><span>hello@crossroot.app</span></div>
+        <div class="contact-method"><strong>Support</strong><span>support@crossroot.app</span></div>
+        <div class="contact-method"><strong>Response</strong><span>Beta-stage response times may vary.</span></div>
+      </aside>
+
+      <form class="form-card glass reveal" data-demo-form>
+        <div class="form-grid">
+          <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required /></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+          <div class="field full"><label for="topic">Topic</label><select id="topic" name="topic"><option>General question</option><option>Beta access</option><option>Feature suggestion</option><option>Partnership</option><option>Support</option></select></div>
+          <div class="field full"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us what is on your mind..." required></textarea></div>
+          <div class="field full"><button class="btn btn-primary btn-lg" type="submit">Send message</button><p class="form-status" role="status"></p></div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+  <div data-footer></div>
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
