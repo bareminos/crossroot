@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Search every file — Crossroot universal file search." />
+  <title>Search every file | Crossroot</title>
+  <link rel="icon" href="assets/icons/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="home">
+  <div data-header></div>
+  
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <div class="eyebrow"><span class="dot"></span>Private beta coming soon</div>
+        <h1>Every file.<span class="gradient">One search.</span></h1>
+        <p class="lead">Crossroot helps you find files across Google Drive, OneDrive, iCloud, Dropbox, and your computer—without remembering where you saved them.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="signup.html">Get early access <span>↗</span></a>
+          <a class="btn btn-secondary btn-lg" href="how-it-works.html">See how it works</a>
+        </div>
+        <p class="microcopy">Your files stay where they are. Crossroot helps you find them.</p>
+      </div>
+
+      <div class="search-shell reveal">
+        <div class="search-card glass">
+          <div class="window-bar">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span class="window-name">Crossroot Search</span>
+            <span class="key">⌘ K</span>
+          </div>
+          <div class="search-input">
+            <span class="search-icon">⌕</span>
+            <span data-typed-search></span><span class="caret"></span>
+          </div>
+          <div class="chips">
+            <button class="chip active" data-source="all">All files</button>
+            <button class="chip" data-source="drive">Drive</button>
+            <button class="chip" data-source="onedrive">OneDrive</button>
+            <button class="chip" data-source="local">Local</button>
+            <button class="chip" data-source="icloud">iCloud</button>
+          </div>
+          <div class="results">
+            <article class="result" data-source="drive">
+              <div class="file-icon green-bg">S</div>
+              <div><h3>Carnival Submissions</h3><p>Google Sheets · Google Drive</p></div>
+              <div class="result-meta"><time>Mar 12, 2025</time><b>↗</b></div>
+            </article>
+            <article class="result" data-source="icloud">
+              <div class="file-icon blue-bg">IMG</div>
+              <div><h3>Orange cat by the window</h3><p>Photo · iCloud Drive</p></div>
+              <div class="result-meta"><time>Jul 8, 2019</time><b>↗</b></div>
+            </article>
+            <article class="result" data-source="local">
+              <div class="file-icon red-bg">PDF</div>
+              <div><h3>Science Fair Notes</h3><p>PDF · Documents/School</p></div>
+              <div class="result-meta"><time>Yesterday</time><b>↗</b></div>
+            </article>
+          </div>
+          <div class="search-bottom"><span>↑ ↓ Navigate</span><span>Enter Open</span><span>Esc Close</span></div>
+        </div>
+        <div class="floating left glass"><div><strong>5 sources connected</strong><span>One private index</span></div></div>
+        <div class="floating right glass"><div><strong>Private by design</strong><span>Files stay where they are</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="provider-strip">
+    <div class="container">
+      <p>Search across the places you already use</p>
+      <div class="providers"><span>Google Drive</span><span>OneDrive</span><span>iCloud</span><span>Dropbox</span><span>Local Files</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">The problem</div>
+        <h2>Stop remembering where.<br />Start remembering what.</h2>
+        <p>Crossroot gives your scattered storage one clean search layer, so finding a file feels less like detective work.</p>
+      </div>
+      <div class="grid-3">
+        <article class="info-card glass reveal"><span class="number">01</span><div class="icon-box">＋</div><h3>Connect your sources</h3><p>Link cloud storage and approve the local folders Crossroot may index.</p></article>
+        <article class="info-card glass reveal"><span class="number">02</span><div class="icon-box">⌁</div><h3>Build one private index</h3><p>Crossroot organizes names, metadata, locations, and supported content.</p></article>
+        <article class="info-card glass reveal"><span class="number">03</span><div class="icon-box">↗</div><h3>Open the original</h3><p>Search once and open the real file in the app or service where it already lives.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal"><div class="eyebrow">One calm layer</div><h2>Built for modern file chaos.</h2></div>
+      <div class="bento">
+        <article class="feature-panel large glass reveal">
+          <div><span class="label">Unified search</span><h3>One result list. Every source.</h3><p>Search local files and cloud providers without opening five different apps.</p></div>
+          <div class="mini-ui">
+            <div class="mini-query">project atlas</div>
+            <div class="mini-row"><span class="badge">D</span><div><strong>Project Atlas</strong><small>Google Drive</small></div></div>
+            <div class="mini-row"><span class="badge">L</span><div><strong>Atlas Research.pdf</strong><small>Local Documents</small></div></div>
+          </div>
+        </article>
+        <article class="feature-panel glass reveal"><span class="label">Natural language</span><h3>Search how you actually remember.</h3><p>“That photo of the orange cat by the window from 2019.”</p></article>
+        <article class="feature-panel glass reveal"><span class="label">Fast opening</span><h3>Find it here. Open it there.</h3><p>Crossroot avoids creating another copy and sends you to the original file.</p></article>
+        <article class="feature-panel wide glass reveal">
+          <div><span class="label">Private by design</span><h3>Your files stay where they are.</h3><p>Crossroot is designed around permission-based indexing and local-first search.</p></div>
+          <div class="mini-ui"><div class="mini-row"><span class="badge">✓</span><div><strong>Permission-based</strong><small>You control indexed folders</small></div></div><div class="mini-row"><span class="badge">✓</span><div><strong>Local-first</strong><small>Designed to reduce uploads</small></div></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta glass reveal">
+        <div><div class="eyebrow">Early access</div><h2>Your files are scattered.<br />Your search should not be.</h2><p>Join the Crossroot beta and help shape universal file search.</p></div>
+        <div class="cta-side"><a class="btn btn-primary btn-lg" href="signup.html">Join the beta</a><small>Windows first · macOS planned</small></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <div data-footer></div>
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
