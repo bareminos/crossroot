@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Crossroot searches every file across your computer and cloud storage from one place."
+  />
+  <title>Crossroot — Search every file</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="orb orb-one" aria-hidden="true"></div>
+  <div class="orb orb-two" aria-hidden="true"></div>
+  <div class="orb orb-three" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Crossroot home">
+        <span class="brand-mark">
+          <span class="brand-line line-a"></span>
+          <span class="brand-line line-b"></span>
+          <span class="brand-line line-c"></span>
+        </span>
+        <span>Crossroot</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#security">Security</a>
+        <a href="#download">Download</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="button button-ghost" data-open-auth="login">Log in</button>
+        <button class="button button-primary" data-open-auth="signup">Join the beta</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            Private beta coming soon
+          </div>
+
+          <h1>
+            Every file.
+            <span class="gradient-text">One search.</span>
+          </h1>
+
+          <p class="hero-description">
+            Crossroot helps you find files across Google Drive, OneDrive,
+            iCloud, Dropbox, and your computer—without remembering where you
+            saved them.
+          </p>
+
+          <div class="hero-actions">
+            <button class="button button-primary button-large" data-open-auth="signup">
+              Get early access
+              <span aria-hidden="true">↗</span>
+            </button>
+
+            <a class="button button-secondary button-large" href="#demo">
+              See how it works
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <div class="avatar-stack" aria-hidden="true">
+              <span>J</span>
+              <span>M</span>
+              <span>A</span>
+            </div>
+            <p>
+              Built for people whose files are scattered everywhere.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-delay" id="demo">
+          <div class="search-window glass-card">
+            <div class="window-toolbar">
+              <div class="window-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="window-label">Crossroot Search</span>
+              <span class="keyboard-hint">⌘ K</span>
+            </div>
+
+            <div class="search-field">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" />
+              </svg>
+              <span id="typed-search"></span>
+              <span class="typing-caret"></span>
+            </div>
+
+            <div class="source-chips">
+              <button class="source-chip active" data-source="all">All files</button>
+              <button class="source-chip" data-source="drive">Drive</button>
+              <button class="source-chip" data-source="onedrive">OneDrive</button>
+              <button class="source-chip" data-source="local">Local</button>
+              <button class="source-chip" data-source="icloud">iCloud</button>
+            </div>
+
+            <div class="result-list">
+              <article class="result-row" data-result-source="drive">
+                <div class="file-icon file-sheet">S</div>
+                <div class="file-info">
+                  <h3>Carnival Submissions</h3>
+                  <p>Google Sheets · Google Drive</p>
+                </div>
+                <div class="file-meta">
+                  <span>Mar 12, 2025</span>
+                  <button aria-label="Open Carnival Submissions">↗</button>
+                </div>
+              </article>
+
+              <article class="result-row" data-result-source="icloud">
+                <div class="file-icon file-image">IMG</div>
+                <div class="file-info">
+                  <h3>Orange cat by the window</h3>
+                  <p>Photo · iCloud Drive</p>
+                </div>
+                <div class="file-meta">
+                  <span>Jul 8, 2019</span>
+                  <button aria-label="Open cat photo">↗</button>
+                </div>
+              </article>
+
+              <article class="result-row" data-result-source="local">
+                <div class="file-icon file-pdf">PDF</div>
+                <div class="file-info">
+                  <h3>Science Fair Notes</h3>
+                  <p>PDF · Documents/School</p>
+                </div>
+                <div class="file-meta">
+                  <span>Yesterday</span>
+                  <button aria-label="Open Science Fair Notes">↗</button>
+                </div>
+              </article>
+            </div>
+
+            <div class="search-footer">
+              <span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span>
+              <span><kbd>Enter</kbd> Open</span>
+              <span><kbd>Esc</kbd> Close</span>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-left glass-card">
+            <span class="mini-icon">⌁</span>
+            <div>
+              <strong>5 sources connected</strong>
+              <span>Everything stays organized</span>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-right glass-card">
+            <span class="mini-icon">✓</span>
+            <div>
+              <strong>Private by design</strong>
+              <span>Your files stay where they are</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo-strip">
+      <div class="container">
+        <p>Search across the places you already use</p>
+        <div class="provider-row">
+          <span>Google Drive</span>
+          <span>OneDrive</span>
+          <span>iCloud</span>
+          <span>Dropbox</span>
+          <span>Local Files</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow">How it works</div>
+          <h2>Stop remembering where.<br />Start remembering what.</h2>
+          <p>
+            Connect your storage, let Crossroot index the files you approve,
+            then search everything from one clean interface.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="feature-card glass-card reveal">
+            <span class="step-number">01</span>
+            <div class="card-icon">＋</div>
+            <h3>Connect your sources</h3>
+            <p>
+              Link cloud drives and choose which folders on your computer
+              Crossroot is allowed to index.
+            </p>
+          </article>
+
+          <article class="feature-card glass-card reveal">
+            <span class="step-number">02</span>
+            <div class="card-icon">⌁</div>
+            <h3>Build one private index</h3>
+            <p>
+              Crossroot organizes filenames, metadata, locations, and approved
+              document text into a searchable index.
+            </p>
+          </article>
+
+          <article class="feature-card glass-card reveal">
+            <span class="step-number">03</span>
+            <div class="card-icon">↗</div>
+            <h3>Find and open instantly</h3>
+            <p>
+              Search once, filter by source, and open the original file right
+              where it already lives.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feature-section" id="features">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Built for modern file chaos</div>
+          <h2>One calm layer above<br />all your storage.</h2>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-card bento-large glass-card reveal">
+            <div>
+              <span class="card-label">Unified search</span>
+              <h3>One result list. Every source.</h3>
+              <p>
+                Search local files and cloud providers without opening five
+                separate apps or browser tabs.
+              </p>
+            </div>
+            <div class="mini-search-demo">
+              <div class="mini-query">project atlas</div>
+              <div class="mini-result">
+                <span class="provider-badge">D</span>
+                <div>
+                  <strong>Project Atlas</strong>
+                  <small>Google Drive</small>
+                </div>
+              </div>
+              <div class="mini-result">
+                <span class="provider-badge">L</span>
+                <div>
+                  <strong>Atlas Research.pdf</strong>
+                  <small>Local Documents</small>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bento-card glass-card reveal">
+            <span class="card-label">Natural language</span>
+            <h3>Search how you actually remember.</h3>
+            <p class="quote">
+              “That photo of the orange cat near the window from 2019.”
+            </p>
+          </article>
+
+          <article class="bento-card glass-card reveal">
+            <span class="card-label">Source filters</span>
+            <h3>Narrow things down without starting over.</h3>
+            <div class="filter-pills">
+              <span>Photos</span>
+              <span>2019</span>
+              <span>iCloud</span>
+            </div>
+          </article>
+
+          <article class="bento-card glass-card reveal">
+            <span class="card-label">Fast opening</span>
+            <h3>Crossroot finds it. Your original app opens it.</h3>
+            <p>
+              Files remain in their original location, so you never create
+              another messy copy.
+            </p>
+          </article>
+
+          <article class="bento-card bento-wide glass-card reveal" id="security">
+            <div>
+              <span class="card-label">Private by design</span>
+              <h3>Your files stay where they are.</h3>
+              <p>
+                Crossroot is designed to index only what you approve. Local
+                files do not need to be uploaded just to become searchable.
+              </p>
+            </div>
+            <div class="security-visual" aria-hidden="true">
+              <div class="shield-ring">
+                <div class="shield-core">✓</div>
+              </div>
+              <span>Encrypted</span>
+              <span>Permission-based</span>
+              <span>Local-first</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section download-section" id="download">
+      <div class="container">
+        <div class="cta-card glass-card reveal">
+          <div>
+            <div class="eyebrow">Early access</div>
+            <h2>Your files are scattered.<br />Your search should not be.</h2>
+            <p>
+              Join the Crossroot beta and help shape the future of universal
+              file search.
+            </p>
+          </div>
+
+          <div class="cta-actions">
+            <button class="button button-primary button-large" data-open-auth="signup">
+              Join the beta
+            </button>
+            <span>Windows first · macOS planned</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#top">
+          <span class="brand-mark">
+            <span class="brand-line line-a"></span>
+            <span class="brand-line line-b"></span>
+            <span class="brand-line line-c"></span>
+          </span>
+          <span>Crossroot</span>
+        </a>
+        <p>Search every file, wherever it lives.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#security">Security</a>
+        <a href="#download">Download</a>
+        <a href="mailto:hello@crossroot.app">Contact</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Crossroot</span>
+      <span>Built for a less scattered internet.</span>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="auth-modal" aria-hidden="true">
+    <section class="auth-modal glass-card" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+
+      <div class="auth-logo">
+        <span class="brand-mark">
+          <span class="brand-line line-a"></span>
+          <span class="brand-line line-b"></span>
+          <span class="brand-line line-c"></span>
+        </span>
+      </div>
+
+      <h2 id="auth-title">Join Crossroot</h2>
+      <p id="auth-subtitle">Create an account to join the private beta.</p>
+
+      <form id="auth-form">
+        <label>
+          Email address
+          <input type="email" id="email" placeholder="you@example.com" required />
+        </label>
+
+        <label>
+          Password
+          <input type="password" id="password" placeholder="At least 8 characters" minlength="8" required />
+        </label>
+
+        <button class="button button-primary button-full" type="submit">
+          Continue
+        </button>
+      </form>
+
+      <div class="auth-divider"><span>or</span></div>
+
+      <button class="button button-secondary button-full" type="button">
+        Continue with Google
+      </button>
+
+      <p class="auth-switch">
+        <span id="auth-switch-text">Already have an account?</span>
+        <button type="button" id="auth-switch-button">Log in</button>
+      </p>
+
+      <p class="form-message" id="form-message" role="status"></p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
