@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Manage your Crossroot account and devices." />
+  <title>Dashboard | Crossroot</title>
+  <link rel="icon" href="assets/icons/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="dashboard">
+  <div data-header></div>
+
+  <main class="dashboard-main">
+    <div class="container">
+      <section data-dashboard-loading class="loading-card glass">
+        Loading your Crossroot account…
+      </section>
+
+      <section data-dashboard-content hidden>
+        <div class="dashboard-head">
+          <div>
+            <div class="eyebrow">Crossroot account</div>
+            <h1>Hello, <span data-dashboard-name>there</span>.</h1>
+            <p data-dashboard-email></p>
+          </div>
+          <button class="btn btn-secondary" type="button" data-logout>Log out</button>
+        </div>
+
+        <p class="dashboard-status" data-dashboard-status role="status"></p>
+
+        <div class="dashboard-grid">
+          <article class="dashboard-card glass">
+            <h2>Account overview</h2>
+            <p>Your Firebase account and Crossroot beta information.</p>
+            <div class="account-stat"><span>Email</span><strong data-dashboard-email></strong></div>
+            <div class="account-stat"><span>Email status</span><strong data-verification></strong></div>
+            <div class="account-stat"><span>Beta status</span><strong data-beta-status>pending</strong></div>
+            <button class="btn btn-secondary" type="button" data-send-verification>Send verification email</button>
+          </article>
+
+          <article class="dashboard-card glass">
+            <h2>Profile</h2>
+            <p>Choose the name shown in your Crossroot account.</p>
+            <form class="auth-form" data-profile-form>
+              <div class="field">
+                <label for="display-name">Display name</label>
+                <input id="display-name" maxlength="60" autocomplete="name" />
+              </div>
+              <button class="btn btn-primary" type="submit">Save profile</button>
+            </form>
+          </article>
+
+          <article class="dashboard-card full glass">
+            <h2>Devices</h2>
+            <p>The Crossroot desktop app will register computers here. For now, you can add a test device to prove the database works.</p>
+
+            <form class="inline-form" data-device-form>
+              <div class="field">
+                <label for="device-name">Device name</label>
+                <input id="device-name" name="deviceName" placeholder="Jonny's Surface" maxlength="80" required />
+              </div>
+              <div class="field">
+                <label for="platform">Platform</label>
+                <select id="platform" name="platform">
+                  <option>Windows</option>
+                  <option>macOS</option>
+                  <option>Linux</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" type="submit">Add test device</button>
+            </form>
+
+            <div class="device-list" data-device-list></div>
+          </article>
+
+          <article class="dashboard-card third glass">
+            <h2>Google Drive</h2>
+            <p>Cloud-drive connection will be added after the desktop search prototype works.</p>
+            <button class="btn btn-secondary disabled" disabled>Coming later</button>
+          </article>
+
+          <article class="dashboard-card third glass">
+            <h2>OneDrive</h2>
+            <p>Microsoft account connection will be added as a separate provider integration.</p>
+            <button class="btn btn-secondary disabled" disabled>Coming later</button>
+          </article>
+
+          <article class="dashboard-card third glass">
+            <h2>Desktop app</h2>
+            <p>The first Windows build will index approved local folders and search filenames.</p>
+            <a class="btn btn-secondary" href="download.html">View download plans</a>
+          </article>
+
+          <article class="dashboard-card full glass">
+            <h2>Important setup reminder</h2>
+            <div class="setup-notice">
+              This dashboard will only work after you enable Firebase Authentication, create Firestore, and publish the supplied security rules. Follow the included SETUP-GUIDE.md exactly.
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div data-footer></div>
+  <script src="js/main.js"></script>
+  <script type="module" src="js/auth-state.js"></script>
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

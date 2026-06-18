@@ -25,8 +25,13 @@ function headerTemplate() {
         <nav class="nav-links" aria-label="Primary navigation">${navLinks}</nav>
 
         <div class="nav-actions">
-          <a class="btn btn-ghost" href="login.html">Log in</a>
-          <a class="btn btn-primary" href="signup.html">Join the beta</a>
+          <div data-guest-only>
+            <a class="btn btn-ghost" href="login.html">Log in</a>
+            <a class="btn btn-primary" href="signup.html">Join the beta</a>
+          </div>
+          <div data-auth-only hidden>
+            <a class="btn btn-secondary" href="dashboard.html">Dashboard</a>
+          </div>
         </div>
 
         <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
@@ -35,8 +40,13 @@ function headerTemplate() {
 
         <div class="mobile-panel">
           ${navLinks}
-          <a class="btn btn-secondary" href="login.html">Log in</a>
-          <a class="btn btn-primary" href="signup.html">Join the beta</a>
+          <div data-guest-only>
+            <a class="btn btn-secondary" href="login.html">Log in</a>
+            <a class="btn btn-primary" href="signup.html">Join the beta</a>
+          </div>
+          <div data-auth-only hidden>
+            <a class="btn btn-primary" href="dashboard.html">Dashboard</a>
+          </div>
         </div>
       </div>
     </header>`;
@@ -146,11 +156,3 @@ if (typed) {
   tick();
 }
 
-document.querySelectorAll("[data-demo-form]").forEach(form => {
-  form.addEventListener("submit", event => {
-    event.preventDefault();
-    const status = form.querySelector(".form-status");
-    if (status) status.textContent = "Thanks — this demo form is ready to connect to the backend.";
-    form.reset();
-  });
-});
